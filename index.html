@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        body{
+            background: linear-gradient(150deg,#f39202, #D2691E );
+            font-family: 'Poppins', sans-serif;
+
+        }
+        .card_head{
+            display: flex;
+            width:100%;
+            height:160px;
+            background:rgba(0 , 0, 0, 0.5);
+            border-radius: 10px;
+            border-bottom: 2px solid #fff;
+        }
+        .card_head_logo{
+            width:400px;
+            height:120px;
+            background: linear-gradient(150deg, rgb(222, 13, 250), rgb(1, 108, 231));
+            border-radius: 10px;    
+            box-shadow: rgba(1, 255, 35, 0.6) 0 3px 15px;
+            display: flex;
+            margin-top:10px ;
+            margin-left: 10px;  
+            border: 5px solid #fff;   
+        }
+        .card_head_logo i{
+            font-size: 80px;
+            color: #fff;
+            margin-top:20px ;
+            margin-left: 40px;
+        }
+        .card_head_logo h1{
+            color:yellow;
+            font-size: 50px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .card_head_logo h2{
+            color:aqua;
+            transform: rotate(-20deg);
+            margin-left: 10px;
+        }
+        .card_head_search{
+            width:600px;
+            height:120px;
+            border: 4px solid rgba(169, 221, 72, 0.5);
+            margin-left: 40px;
+            margin-top: 10px;
+            border-radius: 10px;
+            overflow: hidden;
+            
+            
+           
+            justify-content: center;
+            background:linear-gradient(120deg, rgb(29, 1, 80), rgba(0, 0, 0, 0.4));
+
+        }
+        .card_head_search p{
+            font-size: 20px;
+            color:aqua;
+            display: flex;
+            margin-left: 150px;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+            
+        }
+        .deezer-left{
+            font-size: 140px;
+            color:rgba(137, 18, 184, 0.7);
+            margin-top: -35px;
+        }
+        .deezer-right{
+            font-size: 140px;
+            color:rgba(137, 18, 184, 0.7);
+            margin-top: -165px;
+            margin-left: 460px;
+            
+
+        }
+        .search_body{
+            width:300px;
+            height:60px;
+            display: flex;
+            
+            
+            margin-top: -140px;
+            margin-left: 140px;
+        }
+        .search_body input{
+            width:260px;
+            height:50px;
+            border: none;
+            border-radius: 10px;
+            outline: none;
+            transition:  all 0.7s ease;
+            
+            font-size: 20px;
+            box-shadow: rgb(140, 178, 223) 0 3px 15px;
+            background: linear-gradient(150deg, rgb(237, 253, 7), rgb(230, 12, 12));
+        }
+        .search_body button{
+            width:55px;
+            height:55px;
+            transition: 0.2s;
+            top:0;
+            right:0;
+            margin-top: -1px;
+            border-radius: 10px;
+            background: linear-gradient(100deg, rgb(227, 16, 235), rgb(4, 59, 177));
+            border: none;
+            color:white;
+            box-shadow: rgb(1, 108, 231) 0 4px 30px;
+
+        }  
+        .search_body button i{
+            font-size: 20px;
+        } 
+        .search_body button:hover{
+            background: rgb(210, 218, 228);
+            color:black
+        }
+        .search_body input.hide{
+            width:0px;
+        }
+        .avata{
+            width:590px;
+            height:125px;
+            background: #000000;
+            display: flex;
+            margin-top: 12px;
+            margin-left: 20px;
+            box-shadow: rgb(7, 220, 248) 0 3px 15px;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+
+
+        }
+        .avata_body{
+            width:80px;
+            height:80px;
+            border-radius: 50%;
+            border: 3px solid rgb(13, 213, 228);
+            box-shadow: rgb(1, 108, 231) 0 3px 20px;
+            overflow: hidden;
+            margin-top: 17px;
+            margin-left: 10px;
+            transition: 0.5s;
+            
+
+        }
+        .avata_body img{
+            display: flex;
+            width:90px;
+            height:90px;
+            transition:  0.5s;
+
+
+        }
+        .avata_body:hover{
+            width:160px;
+            height:160px;
+            border: none;
+            border-radius: 10px;
+            margin-top: -20px;
+            margin-left: -5px;
+            box-shadow: rgb(13, 213, 228) 0 4px 20px;
+
+
+        }
+        .avata_body:hover img{
+            width:160px;
+            height:160px;
+        }
+        .Link_tiktok p{
+            color:white;
+            margin-left: 10px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .Link_tiktok a{
+            font-size: 30px;
+            border: 2px solid #fff;
+            color:white;
+            text-align: center;
+            justify-content: center;
+            box-shadow: rgb(227, 16, 235) 0 4px 15px;
+            margin-left: 30px;
+            transition: 0.2s;
+
+        }
+        .Link_tiktok a:hover{
+            transform: scale(1.1);
+            color:aqua;
+            
+        }
+        .text_review p{
+            color:rgb(230, 33, 187);
+            margin-top: -72px;
+            font-size: 20px;
+            margin-left: 140px;
+            border: 1px solid firebrick;
+            border-radius: 20px;
+        }
+        .follow h2{
+            color:rgb(243, 219, 6);
+            margin-left: 140px;
+        }
+        .like{
+            color:antiquewhite;
+            font-size: 25px;
+            margin-top: -50px;
+            margin-left: 320px; 
+        }
+        .btn_close_avata{
+            width:120px;
+            height: 20px;
+            background: #2d0d5f;
+            margin-top: 120px;
+            margin-left: -300px;
+            border-radius: 4px;
+            border: none;
+           
+
+            box-shadow: rgb(13, 213, 228) 0 3px 14px;
+        }
+        .btn_close_avata_body{
+            width:20px;
+            height:20px;
+            border: none;
+            background: rgb(227, 16, 235 , 0.2);
+            border-radius: 10px;
+            margin-left: 50px;
+            transition:  0.2s;
+            text-align: center;
+
+            
+            
+
+        }
+        .btn_close_avata_body i{
+            color:white;
+            font-size: 15px;
+            
+
+        }
+        .btn_close_avata_body:hover{
+            transform:  scale(1.1);
+            background: red;
+        }
+        .avata.hideavata {
+            height:10px;
+
+        }
+        .home{
+            width:120px;
+            height:900px;
+            margin-top: 30px;
+            margin-left: 50px;
+            background: rgba(0 , 0, 0 , 0.6);
+            border-radius: 4px;
+            box-shadow: rgba(0 , 0, 0 , 0.6) 0 4px 20px;
+            overflow: hidden;
+            transition:  all 0.8s ease;
+            
+        }
+        .btn_open_home{
+            width:100%;
+            background: none;
+            
+            height:100px;
+            border-radius: 10px;
+            border-bottom: 2px solid #ccc;
+            
+
+        }
+        .btn_open_home button{
+            width:100%;
+            height:100%;
+            background: #f39911;
+            border-radius: 10px;
+            box-shadow: rgb(13, 213, 228) 0 4px 15px;
+            visibility: hidden;
+            opacity: 0;
+            transition: all 0.4s ease;
+            
+
+        }
+        .btn_open_home button i{
+            font-size: 60px;
+            color:white;
+
+        }
+        .menu i{
+            font-size: 40px;
+            margin-left:40px ;
+            margin-top: 5px;
+            color:aquamarine;
+            border-bottom: 1px solid #fff;
+
+        }
+        .menu p{
+            font-family: 'Poppins', sans-serif;
+            font-size: 20px;
+            color:aqua;
+            margin-left: 16px;
+        }
+        .menu i:hover{
+            color:cadetblue;
+        }
+        .btn_open_home button:hover{
+            background: #D2691E;
+        }
+        .home.hidehome{
+            height:100px;
+            background: none;
+
+        }
+        .btn_open_home button.hide_btn_home{
+            visibility: visible;
+            opacity: 1;
+        }
+        .img_music{
+            width:160px;
+            height:150px;
+            border-radius: 50%;
+            overflow: hidden;
+            
+            margin-left: 20px;
+            border: 2px solid rgb(1, 29, 29);
+            box-shadow: rgb(13, 213, 228) 0 3px 20px;
+
+        }
+        .img_music img{
+            display: flex;
+            width:160px;
+            height:160px;
+            margin-top: -10px;
+            margin-left: -20px;
+        }
+        .chuyen_nghiep{
+            width:140px;
+            height:700px; 
+            margin-top: 20px;
+            background: linear-gradient(150deg, rgba(26, 238, 253, 0.4), rgba(230, 17, 230, 0.4));
+            border-radius: 10px;
+            box-shadow: rgb(247, 248, 248) 0 3px 20px;
+            overflow: hidden;
+            transition:  all 0.5s ease;
+
+
+        }
+        .chuyen_nghiep_btn{
+            width:100%;
+            height:50px;
+            background: linear-gradient(150deg, rgb(231, 171, 3), rgb(24, 32, 146));
+            border-bottom: 2px solid #fff;
+
+
+        }
+        .btn_chuyen_nghiep_body{
+            width:100%;
+            height:100%;
+            background: linear-gradient(150deg, rgb(250, 246, 15), rgb(143, 4, 236), rgb(10, 232, 240));
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: 0.2s;
+            box-shadow: rgb(10, 232, 240) 0 5px 15px;
+
+        }
+         .btn_chuyen_nghiep_body:hover{
+            background: #2d0d5f;
+            color:white;
+        }
+        .circle i{
+            color:white;
+            font-size: 30px;
+            margin-top: 7px;
+        } 
+        .song_music i{
+            font-size: 35px;
+            color:white;
+            margin-top: 3px;
+        }
+        .btn_chuyen_nghiep_body p{
+            font-family: 'Poppins', sans-serif;
+            
+            color:white;
+
+            font-size: 14px;
+            margin-top: -6px;
+           
+        }
+        .chuyen_nghiep_body{
+            width:100%;
+            height:100%;
+            background: black;
+            color:white;
+            box-shadow: rgba(10, 232, 240) 0 4px 15px;
+            text-align: center;
+            transition: all 0.7s;
+            
+            
+
+        }
+        .chuyen_nghiep_body i{
+            font-size: 45px;
+            margin: 20px;
+            border-bottom: 2px solid #ccc;
+
+            
+        }
+        .chuyen_nghiep_body i:hover{
+            color:#ccc;
+            border-bottom: 2px solid cyan;
+
+        }
+        .btn_premium{
+            width:80%;
+            height:50px;
+            border-radius: 10px;
+            border: 2px solid gold;
+            background: linear-gradient(150deg, rgb(2, 9, 105), rgb(89, 173, 241), rgb(98, 4, 221), rgb(119, 57, 95));
+            transition: 0.2s;
+        }
+        .btn_premium:hover{
+            transform: scale(1.2);
+            
+
+        }
+        .btn_premium h2{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color:goldenrod;
+            margin-top: 10px;
+            margin-left: -20px;
+
+        }
+        .i_pre i{
+            color:white;
+            margin-top: -50px;
+            margin-left: 45px;
+            display: flex;
+
+
+         }
+            .chuyen_nghiep.hidechuyennghiep{
+                height:50px;
+        }
+        .List_song{
+            width:1400px;
+            height:700px;   
+            background: rgba(0, 0, 0, 0.7);
+            margin-left: 200px;
+            margin-top: -10px;
+            display: flex;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: rgb(10, 232, 240 ) 0 5px 20px;
+
+        }
+        .List_song_tier{
+            width:300px;
+            height:100%;
+            background: rgb(1, 29, 29, 0.2);
+            margin-top: -20px;
+        }
+        .logo_listsong{
+            width:100%;
+            height:100px;
+            background: orange;
+            border-bottom: 2px solid #ccc;
+            text-align: center;
+            
+
+
+        }
+        .logo_listsong h1{
+            font-size: 40px;
+            font-family: 'Poppins', sans-serif;
+            color:rgb(255, 255, 255);
+            padding-top:30px;
+        }
+        .background_song{
+            width:100%;
+            height:600px;
+            background:black;
+            color:white;
+
+
+        }
+        .background_song img{
+            width:60px;
+            height:60px;
+            border-radius: 4px;
+            border: 1px solid cyan;
+            margin-top:10px;
+            margin-left: 20px;
+            margin: 40px;
+       }
+       .review_song p{
+        color:#fff;
+        font-size:20px;
+        margin-top: -110px;
+        margin-left: 120px;
+       }
+       .review_song h3{
+          font-size: 20px;
+          margin-left: 120px;
+          margin-top: -20px;
+       }
+       .play{
+         width:40px;
+         height:40px;
+         border-radius: 50%;
+         background: green;
+         border: none;
+         margin-left: 240px;
+         margin-top: -40px;
+         transition: 0.2s;
+         
+        
+        
+        
+       }
+       .play i{
+        font-size: 20px;
+        color:white;
+
+       }
+       .play:hover{
+         background:white ;
+         color:black;
+       }
+       .play:hover i{
+        color:black;
+       }
+       .btn_show_more{
+        width:200px;
+        height:40px;
+        background: cyan;
+        margin-top: -60px;
+        margin-left: 50px;
+        border-radius: 5px;
+        border: none;
+        box-shadow: rgb(255, 255, 255, 0.6) 0 4px 15px;
+        transition: 0.4s;
+        display: flex;
+
+
+       }
+       .btn_show_more:hover{
+        background:rgb(1, 108, 231) ;
+       }
+       .btn_show_more h2{
+        margin-top:7px;
+        margin-left: 10px;
+    
+    
+       }
+       .btn_show_more i{
+        font-size: 35px;
+        margin-left: 10px;
+       }
+       .list_song_giaodien{
+        width:100%;
+        height:100%;
+        background: rgb(19, 16, 16 , 0.8);
+        display: flex;
+
+
+       }
+       .list_song_giaodien_heart{
+        width:200px;
+        height:200px;
+        background: rgba( 0, 0, 0, 0.6);
+        border-radius: 10px;
+        box-shadow: rgb(1, 108, 231)0 5px 15px;
+        color:white;
+        margin-top: 30px;
+        margin-left:30px ;
+       }
+       .list_song_giaodien_heart h2{
+        margin-left: 50px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        
+
+       }
+       .list_song_giaodien_heart p{
+        font-size: 20px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        margin-top: -20px;
+        margin-left: 60px;
+        color:#D2691E;
+
+       }
+       .yeuthich i{
+        color:red;
+        font-size: 30px;
+        margin-top: -15px;
+        margin-left: 120px;
+        
+        
+
+       }
+       .yeuthich i:hover{
+        color:#612909;
+       }
+       .yeuthich p{
+        margin-top: -30px;
+        color:white;
+        margin-left: 10px;
+        border-bottom: 1px solid #ccc;
+
+       }
+       .share i{
+        color:yellow;
+        font-size: 30px;
+        margin-left: 120px;
+
+
+       }
+       .share  p{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color:white;
+        margin-top: -30px;
+        margin-left: 15px;
+        border-bottom: 1px solid #ccc;
+
+       }
+       .share i:hover{
+        color:rgb(179, 179, 29);
+       }
+       .song_video{
+        width:500px;
+        height:400px;
+        background: black;
+        border-radius: 14px;
+        box-shadow: rgb(104, 219, 219) 0 10px 15px;
+        margin-top: 30px;
+        margin-left: 10px;
+        
+
+       }
+       .song_video_background{
+        width:200px;
+        height:200px;
+        border: 5px solid cyan;
+        margin-left: 140px;
+        margin-top: 20px;
+        
+        box-shadow: rgb(255, 255, 255) 0 4px 15px;
+        
+        border-radius: 10px;
+        color:white;
+        
+
+
+       }
+       .song_video_background img{
+        display: flex;
+        width:200px;
+        height:200px;
+
+       }
+
+
+
+
+       .chu_thich{
+        display: flex;
+        margin-top: 450px;
+        margin-left: -700px;
+        width:200px;
+        
+       }
+       .pause i{
+        font-size: 40px;
+        color:white;
+        margin-left: 70px;
+        margin-top: 10px;
+        
+       }
+       .pause i:hover{
+        color:#ccc;
+       }
+       .time {
+        width:240px;
+        height:20px;
+        border: 4px solid #fff;
+        border-radius: 4px;
+        margin-top:-34px;
+        margin-left: 120px;
+
+       }
+       .time P{
+        color:white;
+        margin-top: 30px;
+
+       }
+       .gioithieu_tacgia{
+        width:250px;
+        height:300px;
+        background: rgba( 0, 0, 0, 0.8);
+        margin-top: 30px;
+        margin-left: 10px;
+        border-radius: 10px;
+        box-shadow: rgb(7, 43, 44) 0 10px 15px;
+        text-align: center;
+
+       }
+       .gioithieu_tacgia h1{
+        color:white;
+        
+       }
+       .gioithieu_tacgia i{
+        font-size: 60px;
+        color:aqua;
+        border: 2px solid #fff;
+        border-radius: 50%;
+        border-bottom: 2px solid #ccc;
+
+       }
+       .gioithieu_tacgia p{
+        font-family: 20px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color:rgb(194, 80, 80);
+
+       }
+       .link_follow a i{
+        font-family: 20px;
+        color:#fff;
+        border: none;
+        border-bottom: 2px solid #ccc;
+        margin: 5px;
+        transition: 0.2s;
+
+
+
+       }
+       .link_follow a i:hover{
+        color:grey;
+       }
+       .chu_thich h3{
+        color:cyan;
+        margin-left: -250px;
+       }
+       .mode_more{
+        display: flex;
+        margin-top: 600px;
+        width:800px;
+        height:50px;
+        margin-left: -400px;
+        
+        
+       }
+       .show_toandien_btn{
+        background: linear-gradient(159deg, rgb(248, 232, 5), rgb(223, 20, 20));
+        border: none;
+        border-radius: 15px;
+        margin-right: 200px;
+        width:200px;
+        height:50px;
+        margin-top: 20px;
+        display: flex;
+        transition: 0.4s;
+       }
+       .show_toandien_btn h2{
+        color:white;
+        margin-left: 0px;
+       }
+       .show_toandien_btn i{
+        font-size: 20px;
+        color:rgb(241, 241, 241);
+        margin-top: 15px;
+        margin-left: 10px;
+        
+       }
+       .show_toandien_btn:hover{
+        background: #612909;
+       }
+       .Comment_button{
+        background: linear-gradient(159deg, rgb(248, 232, 5), rgb(223, 20, 20));
+        border: none;
+        border-radius: 15px;
+        margin-left: -160px;
+        width:200px;
+        height:50px;
+        margin-top: 20px;
+        display: flex;
+        transition: 0.4s;
+       }
+       .Comment_button i{
+         font-size: 20px;
+        color:rgb(241, 241, 241);
+        margin-top: 15px;
+        margin-left: 20px;
+       }
+
+       
+       .Comment_button h2{
+        color:white;
+        margin-left: 20px;
+        margin-top: 12px;
+       }
+       .tac_gia_tim_hieu {
+         background: linear-gradient(159deg, rgb(248, 232, 5), rgb(223, 20, 20));
+        border: none;
+        border-radius: 15px;
+        margin-left:40px;
+        width:400px;
+        height:50px;
+        margin-top: 20px;
+        display: flex;
+        transition: 0.4s;
+       }
+       .tac_gia_tim_hieu h2{
+        color:white;
+        margin-left: 20px;
+        margin-top: 12px;
+       }
+       .tac_gia_tim_hieu i{
+        font-size: 20px;
+        color:rgb(241, 241, 241);
+        margin-top: 15px;
+        margin-left: 20px;
+       }
+       .tac_gia_tim_hieu:hover{
+         background: #612909;
+
+       }
+       .Comment_button:hover{
+        background: #612909;
+       }
+       .List_song.hideListsong{
+         margin-top: -700px;
+         opacity: 1;
+       }
+       
+       
+        
+
+
+        
+    </style>
+</head>
+<body>
+    <div class ="card_head">
+        <div class = "card_head_logo">
+            <i class='bx bxs-music'></i>
+            <h1>PlayList</h1>
+            <h2>Pay</h2>
+
+        </div>
+        <div class = "card_head_search">
+            <p>Hãy tận hưởng âm nhạc mỗi ngày
+                    
+            </p>
+            <div class = "trangtri">
+                <div class = "deezer-left">
+                    <i class='bx bxl-deezer' ></i>
+                </div>
+                <div class = "deezer-right">
+                    <i class='bx bxl-deezer' ></i>
+                </div>
+                
+            </div>
+            
+            <div class = "search_body ">
+                
+                <input class = "search_input hide" type  = "text" placeholder="search...">
+                <button class = "search_btn">
+                    <i class='bx bx-search' ></i>
+                </button>
+                    
+            </div>
+            
+        </div>  
+        
+        <div class = "img_music">
+            <img src = "https://images.pexels.com/photos/1010519/pexels-photo-1010519.jpeg?cs=tinysrgb&dpr=1&w=500">
+        </div>
+        <div class = "avata ">
+            <div class = "avata_body">
+                <img src = "https://p16-common-sign.tiktokcdn.com/tos-alisg-avt-0068/d422861fded188c320f1690012ef5811~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=14579&refresh_token=de8a2d6e&x-expires=1795528800&x-signature=UTP6uQJnYm0WJCTDXYC3Gm81Z5I%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=my2">
+            </div>
+            <div class = "avata_review">
+                <div class="Link_tiktok">
+                    <p>Chi tiết tại đây</p>
+                    <a href ="https://www.tiktok.com/@hungvetranh14"><i class='bx bxl-tiktok' ></i></a>
+
+                </div>
+                <div class = "text_review">
+                    <p>Name acount:Hùng Hoshino</p>
+                    <div class = "follow">
+                        <h2>566 Follow</h2>
+                    </div>
+                    <div class = "like">
+                        21.1k Like
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class = "btn_close_avata">
+                <button class = "btn_close_avata_body">
+                    <i class='bx bx-down-arrow-alt' ></i>
+                </button>
+        </div>
+        <div class = "home hidehome">
+            <div class = "btn_open_home ">
+                <button class = "btn_open_home_body  ">
+                    <i class='bx bx-menu' ></i>
+                </button>
+            </div>
+            <div class = "menu ">
+                <i class='bx bxs-home' ></i>
+                <p>Home</p>
+                <i class='bx bx-music' ></i>
+                <p>Song</p>
+
+                <i class='bx bx-user-voice' ></i>
+                <p>Voice</p>
+
+                <i class='bx bxs-heart-circle' ></i>
+                <p>Addlist</p>
+
+                <i class='bx bxs-download' >
+                </i>
+                <p>DownLoad</p>
+
+                <i class='bx bx-cog' ></i>
+                <p>Setting</p>
+
+                <i class='bx bx-log-in' ></i>
+                <p>Logn Out</p>
+            </div>
+        </div>
+        
+
+    </div>
+    <div class = "chuyen_nghiep hidechuyennghiep">
+        <div class = "chuyen_nghiep_btn">
+            <button class = "btn_chuyen_nghiep_body">
+                
+                
+                <div class = "song_music">
+                    <i class='bx bx-music' ></i>
+                </div>
+                <p>Chuyên nghiệp</p>
+            </button>
+        </div>
+        <div class = "chuyen_nghiep_body ">
+            <i class='bx bx-edit-alt'></i>
+            <p>Làm nhạc</p>
+            <i class='bx bx-plus' ></i>
+            <p>thêm list</p>
+            <i class='bx bxs-bar-chart-alt-2'></i>
+            <p>Tương tác</p>
+            <i class='bx bxs-bookmarks'></i>
+            <p>Số bài nhạc đã làm</p>
+            <div class = "premium">
+                <button class = "btn_premium">
+                    <h2>Pre</h2>
+                    <div class = "i_pre">
+                         <i class='bx bx-bitcoin'></i>
+                    </div>
+                     
+                </button>
+            </div>
+        </div>
+
+    </div>
+    <div class = "List_song ">
+        <div class = "List_song_tier">
+            <div class = "logo_listsong">
+                <h1>List Song</h1>
+            </div>
+            <div class = "background_song">
+                <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2ITfLiZsiZMAF2upffBO-5vtSFdl-PpgJ83obMVZPMA&s=10">
+                <div class = "review_song">
+                    <p>Bài nhạc A</p>
+                    <h3>Tác giả B</h3>
+                    <button class = "play">
+                        <i class='bx bx-play'></i>
+                    </button>
+                </div>
+                <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3G7eewAkDLZKuqKEeh4FJxG54DdgXuPnRYbx2Q_Pjog&s=10">
+                <div class = "review_song">
+                    <p>Bài nhạc A</p>
+                    <h3>Tác giả B</h3>
+                    <button class = "play">
+                        <i class='bx bx-play'></i>
+                    </button>
+                </div>
+                <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSss2CTkdzRIiM3q5nQxcAmhgrPNUh6Nwvz4lJ6S6AE2A&s=10">
+                <div class = "review_song">
+                    <p>Bài nhạc A</p>
+                    <h3>Tác giả B</h3>
+                    <button class = "play">
+                        <i class='bx bx-play'></i>
+                    </button>
+                </div>
+                <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCpwDHBIEPhw_esuExiB3K1e7iFnOFSDvbFwzHg0zUNg&s=10">
+                <div class = "review_song">
+                    <p>Bài nhạc A</p>
+                    <h3>Tác giả B</h3>
+                    <button class = "play">
+                        <i class='bx bx-play'></i>
+                    </button>
+                </div>
+            </div>
+            <button class = "btn_show_more">
+                <h2>Show more</h2>
+                <i class='bx bx-layer-plus'></i>
+            </button>
+        </div>
+        <div class = "list_song_giaodien">
+            <div class = "list_song_giaodien_heart">
+                <h2>Bài nhạc A</h2>
+                <p>tác giả B</p>
+                <div class = "yeuthich">
+                    <i class='bx bxs-heart' ></i>
+                    <p>Yêu thích</p>
+                </div>
+                <div class = "share">
+                    <i class='bx bxs-share' ></i>
+                    <p>Share</p>
+                </div>
+            </div>
+            <div class = "song_video">
+                <div class = "song_video_background">
+                    <img src = "data:image/jpeg;base64,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">
+                </div>
+                <div class ="pause">
+                    <i class='bx bx-pause' ></i>
+                    <div class = "time">
+                        <p>1/1:00</p>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class = "gioithieu_tacgia">
+                <h1>Tác giả A</h1>
+                <i class='bx bx-happy-alt'></i> 
+                <p>Follow trên</p>
+                <div class = "link_follow">
+                   <a href = "#"><i class='bx bxl-tiktok' ></i></a>
+                   <a href = "#"><i class='bx bxl-facebook-circle' ></i></a>
+                   <a href = "#"><i class='bx bxl-youtube' ></i></a>
+                </div>
+            </div>
+            <div class = "chu_thich">
+                <h3>Chú thích: Bài nhạc này được sáng tác bởi #hds000 có giai điệu du dương và thanh cao, âm ngữ cao và dễ nhớ
+                    ra mắt vào ngày none, tháng none năm 202# , hiện tại đã có hơn ### người nghe và yêu thích
+                </h3>
+            </div>
+            <div class = "mode_more">
+                <div class = "show_toandien">
+                    <button class = "show_toandien_btn">
+                        <h2>Show toàn diện</h2>
+                        <i class='bx bxs-show' ></i>
+                    </button>
+                </div>
+                <div class = "comment">
+                    <button class = "Comment_button">
+                        <h2>Comments</h2>
+                        <i class='bx bx-message-square-dots'></i>
+                        
+                    </button>
+                </div>
+                <div class = "tim_hieu_chi_tiet">
+                    <button class = "tac_gia_tim_hieu">
+                        <h2>Một số tác phẩm khác của tác giả</h2>
+                        <i class='bx bx-plus' ></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <script>
+        var btnopen = document.querySelector('.search_btn')
+        var input_search = document.querySelector('.search_input')
+        var btnavata = document.querySelector('.btn_close_avata_body')
+        var avata = document.querySelector('.avata')
+        var home = document.querySelector('.home')
+        var btn_open_home = document.querySelector('.btn_open_home_body')
+        var btn_open_chuyennghiep = document.querySelector('.btn_chuyen_nghiep_body')
+        var menu_chuyen_nghiep = document.querySelector('.chuyen_nghiep')
+        var listsong = document.querySelector('.List_song')
+        function open1(){
+            input_search.classList.toggle('hide')
+
+        }
+        btnopen.addEventListener('click', open1)
+        function open2(){
+            avata.classList.toggle('hideavata')
+            btn_open_home.classList.toggle('hide_btn_home')
+        }
+        btnavata.addEventListener('click', open2)
+        function open3(){
+            home.classList.toggle('hidehome')
+        }
+        btn_open_home.addEventListener('click', open3)
+        function open4(){
+            menu_chuyen_nghiep.classList.toggle('hidechuyennghiep')
+            listsong.classList.toggle('hideListsong')
+        }
+        btn_open_chuyennghiep.addEventListener('click', open4)
+    </script>
+    
+</body>
+</html>
